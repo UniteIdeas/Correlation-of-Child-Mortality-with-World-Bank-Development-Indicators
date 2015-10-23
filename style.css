@@ -1,0 +1,219 @@
+body{
+    width: 100%;
+    background-color: #F1F1F1;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#bigContainer{
+    width: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana;
+    font-size: 10pt;
+}
+
+#visual{
+    width: 940px;
+    border: thin #292929 solid;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    overflow: auto;
+}
+
+#visualTitle{
+    text-align: left;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+#visualDesc{
+    text-align: left;
+    padding: 3px 0 10px 0;
+}
+
+#indicatorText{
+    text-align: left;
+    line-height: 130%;
+    margin-top: 20px;
+}
+
+.indicatorData{
+    color: #5959B7;
+    margin-left: 5px;
+}
+
+.indicatorTitle{
+    font-weight: bold;
+}
+
+#topNve, #topPve{
+    width: 455px;
+    margin: 0px 10px 10px 2px;
+}
+
+#topPve{
+    float: left;
+}
+
+#topNve{
+    float: right;
+}
+
+.topLabel{
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    margin: 2px;
+    font-size: 9pt;
+}
+
+.topText{
+    float: left;
+    text-align: left;
+    width: 100%;
+}
+
+.topValue{
+    float: right;
+    text-align: right;
+    width: 18%;
+}
+
+.topTitle{
+    font-weight: bold;
+    cursor: default !important;
+}
+
+.topText, .topValue{
+    background-color: lavender;
+    padding: 3px;
+}
+
+.topText:hover, .topValue:hover{
+    background-color: #5959B7;
+    color: white;
+}
+
+.topTitle:hover {
+    background-color: lavender !important;
+    color: black !important;
+}
+
+.topTitleCenter{
+    text-align: center;
+}
+
+#topToolTip{
+    display: none;
+    position: absolute;
+    border: 0;
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 3px 5px;
+    z-index: 100;
+}
+
+#topComment{
+    font-weight: bold;
+    text-align: left;
+    margin: 25px 0 10px 0;
+}
+
+#legendContainer{
+    margin-top: 10px;
+    width: 100%;
+    overflow: auto;
+}
+
+#legendLeft{
+    float: left;
+    width: 300px;
+    overflow: auto;
+}
+
+#legendRight{
+    float: right;
+    width: 430px;
+    overflow: auto;
+}
+
+.legendTitle{
+    float: left;
+    text-align: left;
+    font-size: 9pt;
+    font-weight: bold;
+    margin-top: -1px;
+}
+
+.legendScale{
+    float: right;
+}
+
+.legendColor{
+    /*border: thin solid #292929;*/
+    width: 200px;
+    height: 15px;
+    background-image: -webkit-linear-gradient(left, #C1C1E9 0%, #5959B7 100%);
+    background-image: -moz-linear-gradient(left, #C1C1E9 0%, #5959B7 100%);
+    background-image: -ms-linear-gradient(left, #C1C1E9 0%, #5959B7 100%);
+    background-image: -o-linear-gradient(left, #C1C1E9 0%, #5959B7 100%);
+    background-image: linear-gradient(left, #C1C1E9 0%, #5959B7 100%);
+}
+
+.legendTextStart{
+    float: left;
+    text-align: left;
+}
+
+.legendTextEnd{
+    float: right;
+    text-align: right;
+}
+
+.legendTextStart, .legendTextEnd{
+    width: 40px;
+    margin: 3px 2px 0 2px;
+    font-size: 7pt;
+    font-weight: bold;
+}
+
+.legendSize{
+    margin-top: -3px;
+}
+
+#chartLabel{
+    font-size: 9pt;
+    margin-bottom: 5px;
+}
+
+#chartTitle{
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#controlContainer{
+    width: 100%;
+    overflow: auto;
+}
+
+#resetButton{
+    float: right;
+    color: #5959B7;
+    background-color: white;
+    border: thin solid #5959B7;
+    font-size: 8pt;
+    cursor: pointer;
+    padding: 1px 4px;
+    font-weight: bold;
+}
+
+#resetButton:hover{
+    color: white;
+    background-color: #5959B7;
+}

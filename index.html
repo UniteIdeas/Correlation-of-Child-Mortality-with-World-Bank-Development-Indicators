@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goal: Decrease Child Mortality (Under the age of 5)</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="lib/jquery-jvectormap-2.0.4.css" type="text/css" media="screen"/>
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <script src="lib/jquery-jvectormap-2.0.4.min.js"></script>
+    <script src="lib/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="lib/Chart/ChartNew.js"></script>
+    <script src="data/indicators.js"></script>
+    <script src="data/correlations.js"></script>
+    <script src="data/references.js"></script>
+    <script src="cmort.js"></script>
+</head>
+<body>
+<div id="bigContainer" align="center">
+    <div id="visual">
+        <div id="visualTitle">Goal: Decrease Child Mortality (Under the age of 5, per 1000 birth)</div>
+        <div id="visualDesc">Investigate which indicator has the highest correlation with child mortality among 1343
+            World Bank
+            development indicators
+        </div>
+        <div id="chartTitle">World Bank Development Indicators (x-axis), Correlation with Child Mortality(y-axis):
+        </div>
+        <canvas id="myChart" width="940" height="260"></canvas>
+        <div id="chartLabel">Please select an indicator by clicking on the chart above to see the visual correlation on the
+            map
+        </div>
+        <div id="world-map" style="width: 940px; height: 530px"></div>
+        <div id="controlContainer"><div id="resetButton" onclick="updateMap(null, null, null, null, null);">Reset Map</div></div>
+        <div id="legendContainer">
+            <div id='legendLeft'>
+                <div class='legendTitle'>Selected Indicator</div>
+                <div class='legendScale'>
+                    <div class="legendSize"><img src="size-legend.png" alt="Indicator Size Legend"/></div>
+                </div>
+            </div>
+            <div id='legendRight'>
+                <div class='legendTitle'>Child Mortality (per 1000 birth)</div>
+                <div class='legendScale'>
+                    <div class="legendColor"></div>
+                    <div class="legendTextStart">2</div>
+                    <div class="legendTextEnd">170</div>
+                </div>
+            </div>
+        </div>
+        <div id="indicatorText"></div>
+        <div id="labelContainer">
+            <div id="topToolTip"></div>
+            <div id="topComment">Top World Bank Indicators we should focus on to reduce child mortality:</div>
+            <div id="topPve">
+                <div class="topLabel">
+                    <div class="topText topTitle">Top Indicators (+ve Correlations)</div>
+                </div>
+            </div>
+            <div id="topNve">
+                <div class="topLabel">
+                    <div class="topText topTitle">Top Indicators (-ve Correlations)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        displayMap();
+        displayChart();
+        displayLabels();
+    });
+</script>
+</body>
+</html>
